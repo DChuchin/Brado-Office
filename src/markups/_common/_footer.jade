@@ -1,0 +1,55 @@
+footer.main-footer
+    .footer-logo__wrapper
+        img(class="footer-logo__img" src='commons/images/logo-footer.png' alt="Brado Office" width="197" height="39")
+    .footer__column.footer__column--first
+        ul.logos__list
+            -var items = ['brado-contract', 'brado-factory', 'brado']
+            each item in items
+                li.logos__item
+                    img(class="logos__img logos__img--" + item alt=item src='commong/images/' + item + '.png')
+    .footer__column.footer__column--second
+        .footer-addresses
+            .footer-addresses__name
+                | HEADQUARTERS
+            .footer-addresses__address
+                | via Cal di Mezzp, 3
+            .footer-addresses__name
+                | CHAIR HOUSE
+            .footer-addresses__subname
+                | (production & logistics)
+            .footer-addresses__address
+                | via Europa, 98    
+    .footer__column.footer__column--third
+        .footer-contacts
+            ul.footer-socials__list
+                -var socials = ['twitter', 'facebook', 'linkedin', 'youtube', 'pinterest']
+                each social in socials
+                    li(class='footer-socials__item footer-socials__item--' + social)= social
+            .footer-contacts__street
+                | 31049 Valdobbiadene
+            .footer-contacts__city
+                | Treviso (Italy)
+            .footer-contacts__phone
+                a(class="footer-contacts__phone-link" href="tel:003904239465")
+                    | tel. 0039 0423 9465
+            .footer-contacts__fax
+                a(class='footer-contacts__fax-link' href='fax:00390423976527')
+                    | fax 0039 0423 976527
+            .footer-contacts__email
+                a(class='footer-contacts__email-link' href='mailto:info@brado.it')
+                    | info@brado.it
+    .footer__column.footer__column--fourth
+        .footer__privacy
+            span
+                | Brado S.p.A.
+            span
+                | CF / PI / Reg. Imp di TV
+            span
+                | Cod. IVA CEE IT 00488710260
+            span
+                | REA Treviso n.124247
+            ul.privacy__list
+                -var items=['privacy', 'cookie', 'credits']
+                each item in items
+                    li.privacy__item
+                        a(class='privacy__link' href='#')= item

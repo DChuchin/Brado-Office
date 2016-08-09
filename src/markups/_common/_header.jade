@@ -1,0 +1,60 @@
+header.main-header
+    .cookie
+        .cookie__text
+            | Questo sito utilizza cookie di analisi e di prestazione per migliorarea navigazione degli utenti. Proseguendo la navigazione acconsenti all’uso dei cookie. Per maggiori informazioni clicca qui.
+        .cookie__close-btn
+            button(type='button')
+                | X
+        .cookie__link
+            a(class='cookie__link' href='#')
+                | chiudi
+    .compact-header
+        include _components/_header-logo
+        include _components/_gamburger
+    .header-top
+        .header-top__leftside
+            .logo__wrapper
+                include _components/_header-logo
+                include _components/_language
+            .header-top__video-wrapper
+                video(class='header-top__video' poster='commons/images/video-poster.jpg' width='560' height='380' preload='metadata')
+                    source(src='')
+                .play-btn
+        .header-top__rightside  
+            ul.header-top__menu
+                -var items = ['prodotti', 'filiera', 'news', 'valori', 'contatti', 'language']
+                each item in items
+                    li.header-top__item
+                        a(class='header-top__link' + ((item=='language'||item=='valori') ? " is-non-visible" : '') href='#')= item
+                        -if (item == 'prodotti')
+                            .header-top__arrow
+                            ul.header-top__inner-list
+                                -var arr = ['direzionali', 'attesa', 'high_line', 'operative', 'lavoro']
+                                each i in arr
+                                    li.header-top__inner-item
+                                        a(class='header-top__inner-link' href='#')= i
+                        -if (item == 'valori')
+                            .header-top__arrow
+                            ul.header-top__inner-list
+                                -var arr = ['ricerca', 'collaborazione', 'accuratezza', 'ergonomia', 'flessibilita', 'organizzazione']
+                                each i in arr
+                                    li.header-top__inner-item
+                                        a(class='header-top__inner-link' href='#')= i
+                        -if (item == 'language')                    
+            ul.mobile-menu__socials
+                -var socials = ['twitter', 'facebook', 'linkedin', 'youtube', 'pinterest']
+                each social in socials
+                    li(class='socials__item')
+                        a(class='socials__link socials__link--' + social href='#')= social
+    .header-bottom
+        -var items = ['direzionali', 'attesa', 'high_line', 'operative', 'lavoro']
+        each item in items
+            li(class='header-bottom__menu')
+                a(class="header-bottom__link" href='#')= item
+            
+    
+        
+                
+        
+                    
+                
