@@ -99,12 +99,13 @@ gulp.task('style', function () {
               mediaQuery: false,
               minPixelValue: 0
             }),
-            pxtorem,
             stylefmt,
     ];
     gulp.src(paths.css.compiled)
         .pipe(plumber())
+        .pipe(sourcemaps.init())
         .pipe(postcss(processors))
+        .pipe(sourcemaps.write())
         .pipe(gulp.dest(paths.css.destination));
 });
 

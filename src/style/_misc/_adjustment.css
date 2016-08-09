@@ -8,7 +8,7 @@ body.popup-opened {
 html {
 	font-family: 'Gotham', sans-serif;
 	width: 100%;
-	color:  #555559;
+	font-size: 1vw ;
 }
 h1,h2,h3,h4,h5 {
 	margin: 0;

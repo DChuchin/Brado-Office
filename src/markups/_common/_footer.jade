@@ -1,12 +1,13 @@
 footer.main-footer
     .footer-logo__wrapper
-        img(class="footer-logo__img" src='commons/images/logo-footer.png' alt="Brado Office" width="197" height="39")
+        img(class="footer-logo__img" src='commons/images/logo-footer.png' alt="Brado Office" )
     .footer__column.footer__column--first
         ul.logos__list
             -var items = ['brado-contract', 'brado-factory', 'brado']
             each item in items
                 li.logos__item
-                    img(class="logos__img logos__img--" + item alt=item src='commong/images/' + item + '.png')
+                    a(class="logos__link" href="#")
+                        img(class="logos__img logos__img--" + item alt=item src='commons/images/' + item + '.png')
     .footer__column.footer__column--second
         .footer-addresses
             .footer-addresses__name
@@ -24,7 +25,8 @@ footer.main-footer
             ul.footer-socials__list
                 -var socials = ['twitter', 'facebook', 'linkedin', 'youtube', 'pinterest']
                 each social in socials
-                    li(class='footer-socials__item footer-socials__item--' + social)= social
+                    li(class='footer-socials__item')
+                        a(class='footer-socials__link footer-socials__link--' + social href='#')= social
             .footer-contacts__street
                 | 31049 Valdobbiadene
             .footer-contacts__city
@@ -39,17 +41,17 @@ footer.main-footer
                 a(class='footer-contacts__email-link' href='mailto:info@brado.it')
                     | info@brado.it
     .footer__column.footer__column--fourth
-        .footer__privacy
-            span
+        .privacy
+            span.privacy__row
                 | Brado S.p.A.
-            span
+            span.privacy__row
                 | CF / PI / Reg. Imp di TV
-            span
+            span.privacy__row
                 | Cod. IVA CEE IT 00488710260
-            span
+            span.privacy__row
                 | REA Treviso n.124247
             ul.privacy__list
-                -var items=['privacy', 'cookie', 'credits']
+                -var items=['Privacy', 'Cookie', 'Credits']
                 each item in items
                     li.privacy__item
                         a(class='privacy__link' href='#')= item

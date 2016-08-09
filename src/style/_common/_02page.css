@@ -1,0 +1,38 @@
+.page__content-container {
+    text-align: center;
+    padding-top: 100px;
+    padding-left: 60px;
+    padding-right: 60px;
+}
+.page__title {
+    width: 100%;
+    margin: 0;
+    font-size: 50px;
+    padding: 50px;
+    text-align: center;
+    text-transform: uppercase;
+
+    &--lime {
+        background: var(--lime);
+    }
+    &--green {
+        background: var(--green);
+    }
+    &--orange {
+        background: var(--orange);
+    }
+    &--blue {
+        background: var(--blue);
+    }
+    &--purple {
+        background: var(--purple);
+    }
+    &--red {
+        background: var(--red);
+    }
+}
+.introduce {
+    background: url('../img/sprite/page-bg-lime.png') no-repeat 0 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+}

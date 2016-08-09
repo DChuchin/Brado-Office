@@ -1,0 +1,37 @@
+.privacy {
+    color: var(--white);
+
+}
+.privacy__row {
+    display: block;
+    margin-bottom: 10px;
+}
+.privacy__list {
+    margin: 0;
+    padding: 0;
+}
+.privacy__item {
+    display: inline-block;
+    vertical-align: middle;
+
+    &:before {
+        content: '-';
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 5px;
+    }
+    &:first-child {
+        &:before {
+            display: none;
+        }
+    }
+}
+.privacy__link {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 12px;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}

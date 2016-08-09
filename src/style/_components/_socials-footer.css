@@ -1,0 +1,16 @@
+.footer-socials__list {
+    margin: 0;
+    padding: 0;
+}
+.footer-socials__item {
+    display: inline-block;
+    list-style: none;
+}
+.footer-socials__link {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: var(--green);
+    border-radius: 50%;
+    text-indent: -9999px;
+}

@@ -1,0 +1,11 @@
+:root {
+    --black: #000;
+    --white: #fff;
+    --lime: #dddc00;
+    --orange: #ee7f01;
+    --green: #6e935a;
+    --blue: #57b1bb;
+    --purple: #bb78ac;
+    --red: #e7501e;
+    --green-alpha: color(var(--lime) alpha(-20%));
+}

@@ -1,0 +1,17 @@
+.cookie {
+    display: none;
+    position: absolute;
+    right: 10px;
+    top: 15px;
+    width: 515px;
+    padding: 15Px;
+    color: #fff;
+    background: rgba(0,0,0, .7);
+    font-size: 14Px;
+}
+.cookie__close-btn {
+    display: inline-block;
+}
+.cookie__link {
+    display: inline-block;
+}
