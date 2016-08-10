@@ -1,4 +1,7 @@
 .main-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
     background: var(--black);
 }
 .compact-header {
@@ -13,18 +16,28 @@
     background: transparent;
     border: none;
     text-indent: -9999px;
-    width: 66px;
+    width: 76px;
     padding: 0;
+    
 
-    &:focus {
+    &:focus,
+    &:hover {
         outline: none;
+        & .gamburger__line:nth-child(1) {
+            width: 100%;
+            margin-left: 0;
+        }
     }
 }
 .gamburger__line {
-    width: 100%;
-    height: 8Px;
-    background: var(--green);
-    margin-bottom: 8Px;
+    width: 90%;
+    margin-left: 10%;
+    height: 8px;
+    background: var(--lime);
+    margin-bottom: 8px;
+    transition: .3s;
+
+
 }
 .header-top{
     display: none;

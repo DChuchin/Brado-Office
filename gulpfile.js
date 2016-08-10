@@ -80,10 +80,10 @@ gulp.task('sync', function () {
 gulp.task('style', function () {
     var processors = [
             cssimport,
-            sprites({
-                stylesheetPath : paths.img.stylesheet,
-                spritePath: paths.img.destination
-            }),
+            // sprites({
+            //     stylesheetPath : paths.img.stylesheet,
+            //     spritePath: paths.img.destination
+            // }),
             cssnext({ browsers: ['last 2 versions', '> 1%', 'iOS > 7', 'Firefox ESR', 'Opera 12.1', 'ie >= 7'] }),
             postcssExtends,
             pxtorem({
@@ -92,7 +92,7 @@ gulp.task('style', function () {
                 'font', 'font-size', 'line-height', 'letter-spacing',
                 'padding', 'padding-top', 'padding-bottom', 'padding-left', 'padding-right',
                 'margin', 'margin-top', 'margin-bottom', 'margin-left', 'margin-right',
-                'border-radius'
+                'border-radius', 'width', 'height'
               ],
               selectorBlackList: [/^html$/],
               replace: true,

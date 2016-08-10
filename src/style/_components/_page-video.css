@@ -52,7 +52,31 @@
     text-transform: uppercase;
     margin-bottom: 75px;
 }
-.page-video__duration {
-    color: var(--green);
+.page-video__title {
+    &--white {
+        color: var(--white);
+    }
+}
+.page-video__subtitle {
     text-transform: uppercase;
+    margin-bottom: 15px;
+
+    &--lime {
+        color: var(--lime);
+    }
+    &--green {
+        color: var(--green);
+    }
+    &--orange {
+        color: var(--orange);
+    }
+    &--blue {
+        color: var(--blue);
+    }
+    &--purple {
+        color: var(--purple);
+    }
+    &--red {
+        color: var(--red);
+    }
 }

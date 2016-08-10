@@ -10,12 +10,20 @@
 
 @import "_common/_footer.css";
 
+@import "_common/_02page.css";
+
+@import "_common/_05_video.css";
+
+@import "_common/_collection.css";
+
 @import "_components/_cookie.css";
 
 @import "_components/_socials-footer.css";
 
 @import "_components/_privacy.css";
 
-@import "_common/_02page.css";
-
 @import "_components/_page-video.css";
+
+@import "_components/_teaser.css";
+
+@import "_common/_single-news.css";

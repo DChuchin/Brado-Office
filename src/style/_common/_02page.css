@@ -32,7 +32,21 @@
     }
 }
 .introduce {
-    background: url('../img/sprite/page-bg-lime.png') no-repeat 0 0;
+    background: no-repeat 0 0;
     background-repeat: no-repeat;
     background-size: contain;
+
+    &--lime {
+        background-image: url('../img/sprite/page-bg-lime.png');
+    }
+}
+.introduce__title {
+    &--lime {
+        color: var(--lime);
+    }
+}
+.page-video__text {
+    color: var(--white);
+    font-size: 22px;
+    font-weight: 400;
 }
