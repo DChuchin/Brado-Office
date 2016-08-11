@@ -7,5 +7,5 @@
     --blue: #57b1bb;
     --purple: #bb78ac;
     --red: #e7501e;
-    --green-alpha: color(var(--lime) alpha(-20%));
+    --lime-alpha: color(var(--lime) alpha(-20%));
 }

@@ -1,5 +1,7 @@
 @import "_vendor/_normalize.css";
 
+@import "_vendor/slick.css";
+
 @import "_misc/_variables.css";
 
 @import "_misc/_adjustment.css";
@@ -27,3 +29,5 @@
 @import "_components/_teaser.css";
 
 @import "_common/_single-news.css";
+
+@import "_common/_product-details.css";

@@ -2,10 +2,6 @@
   font-family: 'Gotham';
   font-style: normal;
   font-weight: 400;
-  src: url('..commons/fonts/gotham-medium.eot'); /* IE9 Compat Modes */
-  src: local('Carrois Gothic'), local('CarroisGothic-Regular'),
-       url('..commons/fonts/gotham-medium.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('..commons/fonts/gotham-medium.woff2') format('woff2'), /* Super Modern Browsers */
-       url('..commons/fonts/gotham-medium.woff') format('woff'), /* Modern Browsers */
-       url('..commons/fonts/gotham-medium.ttf') format('truetype'), /* Safari, Android, iOS */
+  src: local('Gotham'), local('Gotham-regular'),
+       url('../fonts/gotham-medium.otf');;
 }

@@ -5,6 +5,7 @@
     background: var(--black);
 }
 .compact-header {
+    display: none;
     @extend .clearfix;
     padding: 40px 60px;
 }
@@ -18,7 +19,7 @@
     text-indent: -9999px;
     width: 76px;
     padding: 0;
-    
+
 
     &:focus,
     &:hover {
@@ -36,48 +37,6 @@
     background: var(--lime);
     margin-bottom: 8px;
     transition: .3s;
-
-
-}
-.header-top{
-    display: none;
-    flex-direction: row;
-}
-.header-top__leftside {
-    background: #123;
-    flex: 2;
-}
-.header-top__rightside {
-    flex:3;
-    background: #321;
-}
-.header-top__video-wrapper {
-    width: 100%;
-}
-.header-top__video {
-    width: 100%;
-}
-.header-top__menu {
-    display: flex;
-    flex-wrap: wrap;
-}
-.header-top__list {
-    padding: 0;
-    margin: 0;
-}
-.header-top__item {
-    flex: 1;
-    border: 1Px solid white;
-    flex-basis: 33%;
-    list-style: none;
-    margin-left: -1Px;
-    margin-top: -1Px ;
-}
-.header-top__inner-item {
-    list-style: none;
-}
-.header-bottom {
-    display: none;
 }
 .mobile-menu {
     display: none;
@@ -107,4 +66,70 @@
     padding-left: 105Px;
     color: var(--green);
     background: #1b1b1b;
+}
+.main-menu {
+    width: 100%;
+    height: 660px;
+}
+.logo__wrapper {
+    float: left;
+    width: 40%;
+    height: 21.5%;
+
+}
+.main-menu__video-wrapper {
+    float: left;
+    width: 40%;
+    height: calc(57% - 1px);
+    overflow: hidden;
+    box-shadow: 0 0 0 1px gray;
+}
+.main-menu__video {
+    width: 100%;
+}
+.main-menu__item {
+    float: left;
+    width: 20%;
+    height: 21.5%;
+    box-shadow: inset 1px -1px 0 0px gray;
+    text-align: center;
+    display: table-cell;
+    line-height: 140px;
+    transition: .3s;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--white);
+    font-weight: 400;
+    font-size: 18px;
+    &:hover {
+        background-color: var(--lime);
+    }
+
+    &--bg {
+        line-height: initial;
+        &:before {
+            content: '';
+            height: 100%;
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+
+}
+
+.main-menu__text {
+    display: inline-block;
+    vertical-align: middle;
+    width: 80%;
+    height: auto;
+    background: var(--lime-alpha);
+    padding: 5px;
+    color: var(--black);
+}
+.main-menu__search {
+    float: left;
+    width: 60%;
+    height: 14%;
+    box-shadow: inset 1px -1px 0 0px gray;
+
 }

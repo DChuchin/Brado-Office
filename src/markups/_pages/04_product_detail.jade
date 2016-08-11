@@ -2,25 +2,92 @@ extends ../main
 block title
     | Product Detail
 block content
-    main.main
+    main.main.main--product-detail
         h1.product-detail__title
-            | Kind Family
-        .product-category__content
-            .collection__name-wrapper
-                h2.collection__name
-                    | Collezione Kind
-                h3.collection__author
-                    | designer Tomoko Azumi
-            .collection__info
-                | Brevissima descrizione tecnica della sedia / impiego di quali materiali / caratterisctiche principali costiuenti.
-            a(class='collection__download' download)
-                | SCARICA MANAGER PDF
-        ul.collection__list
-            -var items = ['Kind 202 AP', 'Kind 203 AP', 'Kind 203 APW', 'Kind 204 A', 'Kind 202 AP', 'Kind 203 AP', 'Kind 203 APW', 'Kind 204 A']
-            each item in items
-                li.collection__item
-                    a(class='collection__link' href='#')
-                        .collection__image-wrapper
-                            img(class='collection__image' src="commons/images/chair.jpg")
-                        .collection__item-name= item
-            
+            | KIND kit 198/E
+        h2.product-detail__subtitle
+            | Visitatore, schienale datapezzare,girevole su base 4 razze senza braccioli
+        .product-detail__content
+            .product-detail__leftside
+                .product-detail__main-slider
+                    .product-detail__slide
+                        .product-detail__slide-wrapper
+                            img(class="product-detail__slide-img" src="commons/images/chair-big.jpg")
+                    .product-detail__slide
+                        .product-detail__slide-wrapper
+                            img(class="product-detail__slide-img" src="commons/images/chair-big.jpg")
+                    .product-detail__slide
+                        .product-detail__slide-wrapper
+                            img(class="product-detail__slide-img" src="commons/images/chair-big.jpg")
+                .product-detail__links
+                    .product-detail__link-wrapper
+                        a(href='#').product-detail__link.product-detail__link--3d
+                            span
+                                | RICHEDI 3D OBJECT
+                            span
+                                | [Effettua il login per richiedere il download]
+                    .product-detail__link-wrapper
+                        a(href='#').product-detail__link.product-detail__link--info
+                            | RICHIEDI INFORMAZIONI
+                    .product-detail__link-wrapper
+                        a(href='#').product-detail__link.product-detail__link--share
+                            | CONDIVIDI
+            .product-detail__rightside
+                ul.product-parts
+                    li.product-parts__line.product-parts__line--title
+                        span.product-parts__code.product-parts__code--title
+                            | codice
+                        span.product-parts__desc.product-parts__desc--title
+                            | descrizione
+                        span.product-parts__quant.product-parts__quant--title
+                            | q.ta
+                    -var items = ['01','02','03','04','05','06','07','08','09','10','11','12','13']
+                    each item in items
+                        li.product-parts__line
+                            span.product-parts__num= item
+                            span.product-parts__code
+                                | bam06019al
+                            span.product-parts__desc
+                                | Base FIRE in alluminio, 4 razze 0670mm, cono 40mm
+                            span.product-parts__quant
+                                | X 1
+        .bottom-carousel
+            .bottom-carousel__title-wrap
+                h3.bottom-carousel__subtitle
+                    | Altri prodotti della linea
+                h2.bottom-carousel__title
+                    | KIND
+            .bottom-carousel__body
+                .bottom-carousel__slide
+                    .bottom-carousel__image-wrap
+                        img(src='commons/images/chair.jpg').bottom-carousel__image
+                    .bottom-carousel__slide-name
+                        | Kind 202 AP
+                .bottom-carousel__slide
+                    .bottom-carousel__image-wrap
+                        img(src='commons/images/chair.jpg').bottom-carousel__image
+                    .bottom-carousel__slide-name
+                        | Kind 202 AP
+                .bottom-carousel__slide
+                    .bottom-carousel__image-wrap
+                        img(src='commons/images/chair.jpg').bottom-carousel__image
+                    .bottom-carousel__slide-name
+                        | Kind 202 AP
+                .bottom-carousel__slide
+                    .bottom-carousel__image-wrap
+                        img(src='commons/images/chair.jpg').bottom-carousel__image
+                    .bottom-carousel__slide-name
+                        | Kind 202 AP
+                .bottom-carousel__slide
+                    .bottom-carousel__image-wrap
+                        img(src='commons/images/chair.jpg').bottom-carousel__image
+                    .bottom-carousel__slide-name
+                        | Kind 202 AP
+                .bottom-carousel__slide
+                    .bottom-carousel__image-wrap
+                        img(src='commons/images/chair.jpg').bottom-carousel__image
+                    .bottom-carousel__slide-name
+                        | Kind 202 AP
+                    
+                    
+                    

@@ -7,14 +7,17 @@ body.popup-opened {
 }
 html {
 	font-family: 'Gotham', sans-serif;
+	font-weight: 400;
 	width: 100%;
-	font-size: 1vw ;
+	font-size: 1.13vw ;
 }
 h1,h2,h3,h4,h5 {
 	margin: 0;
 	padding: 0;
 }
-
+button {
+	outline-color: var(--lime);
+}
 .clearfix {
 	&:after {
 		content: '';

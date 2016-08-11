@@ -43,21 +43,52 @@ header.main-header
             each social in socials
                 li(class='socials__item')
                     a(class='socials__link socials__link--' + social href='#')= social
-    .header-top
-        .header-top__leftside
-            .logo__wrapper
-                include _components/_header-logo
-                include _components/_language
-            .header-top__video-wrapper
-                video(class='header-top__video' poster='commons/images/video-poster.jpg' preload='metadata')
-                    source(src='')
-                .play-btn
-        .header-top__rightside
-    .header-bottom
-        -var items = ['direzionali', 'attesa', 'high_line', 'operative', 'lavoro']
-        each item in items
-            li(class='header-bottom__menu')
-                a(class="header-bottom__link" href='#')= item
+    .main-menu
+        .logo__wrapper
+            include _components/_header-logo
+            include _components/_language
+        a(class='main-menu__item' href='#')
+            | prodotti
+        a(class='main-menu__item' href='#')
+            | filiera
+        a(class='main-menu__item' href='#')
+            | news
+        .main-menu__video-wrapper
+            video(class='main-menu__video' poster='commons/images/video-poster.jpg' preload='metadata')
+                source(src='')
+            .play-btn
+        a(href="#" class="main-menu__item main-menu__item--bg")
+            .main-menu__text
+                | ricerca
+        a(href="#" class="main-menu__item main-menu__item--bg")
+            .main-menu__text
+                | ricerca
+        a(href="#" class="main-menu__item main-menu__item--bg")
+            .main-menu__text
+                | ricerca
+        a(href="#" class="main-menu__item main-menu__item--bg")
+            .main-menu__text
+                | ricerca
+        a(href="#" class="main-menu__item main-menu__item--bg")
+            .main-menu__text
+                | ricerca
+        a(href="#" class="main-menu__item main-menu__item--bg")
+            .main-menu__text
+                | ricerca
+        form(action="" class="main-menu__search")
+            label
+                | trova una SEDIA
+                input(type="search")
+        a(href="#" class="main-menu__item main-menu__item--bottom")
+            | direzionali
+        a(href="#" class="main-menu__item main-menu__item--bottom")
+            | direzionali
+        a(href="#" class="main-menu__item main-menu__item--bottom")
+            | direzionali
+        a(href="#" class="main-menu__item main-menu__item--bottom")
+            | direzionali
+        a(href="#" class="main-menu__item main-menu__item--bottom")
+            | direzionali
             
     
         

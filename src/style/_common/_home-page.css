@@ -88,7 +88,7 @@
     padding: 10px 20px;
     font-weight: 600;
     background: dddc00;
-    background: var(--green-alpha);
+    background: var(--lime-alpha);
     margin: auto;
     text-decoration: none;
     transition: all, .3s;
