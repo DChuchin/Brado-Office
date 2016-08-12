@@ -87,6 +87,7 @@ gulp.task('style', function () {
             cssnext({ browsers: ['last 2 versions', '> 1%', 'iOS > 7', 'Firefox ESR', 'Opera 12.1', 'ie >= 7'] }),
             postcssExtends,
             pxtorem({
+              rootValue: 14,
               unitPrecision: 5,
               propWhiteList: [
                 'font', 'font-size', 'line-height', 'letter-spacing',

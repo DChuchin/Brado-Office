@@ -3,5 +3,19 @@
   font-style: normal;
   font-weight: 400;
   src: local('Gotham'), local('Gotham-regular'),
-       url('../fonts/gotham-medium.otf');;
+       url('../Font/Gotham/Gotham-Medium.otf');
+}
+@font-face {
+  font-family: 'Gotham';
+  font-style: normal;;
+  font-weight: 700;
+  src: local('Gotham'), local('Gotham-bold'),
+       url('../Font/Gotham/Gotham-Bold.otf');
+}
+@font-face {
+  font-family: 'Gotham';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Gotham'), local('Gotham-book'),
+       url('../Font/Gotham/Gotham-Book.otf');
 }

@@ -1,14 +1,16 @@
 .page__content-container {
     text-align: center;
-    padding-top: 100px;
-    padding-left: 60px;
-    padding-right: 60px;
+    padding-top: 120px;
+    max-width: 950px;
+    margin: 0 auto;
 }
 .page__title {
     width: 100%;
     margin: 0;
     font-size: 50px;
-    padding: 50px;
+    padding: 40px;
+    letter-spacing: -1.3px;
+    line-height: 1.19;
     text-align: center;
     text-transform: uppercase;
 
@@ -35,12 +37,16 @@
     background: no-repeat 0 0;
     background-repeat: no-repeat;
     background-size: contain;
+    padding-top: 55px;
 
     &--lime {
         background-image: url('../img/sprite/page-bg-lime.png');
     }
 }
 .introduce__title {
+    line-height: 1.15;
+    font-weight: 700;
+    padding: 0 20px;
     &--lime {
         color: var(--lime);
     }
@@ -49,4 +55,5 @@
     color: var(--white);
     font-size: 22px;
     font-weight: 400;
+
 }

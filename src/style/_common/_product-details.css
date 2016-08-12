@@ -1,28 +1,26 @@
-.main--product-detail {
-    text-align: left;
-}
+
 .product-detail__title {
     color: var(--lime);
-    font-size: 54px;
+    font-size: 46px;
     max-width: 70%;
     margin-bottom: 20px;
+    letter-spacing: -0.9px;
 }
 .product-detail__subtitle {
-    margin-bottom: 100px;
+    margin-bottom: 86px;
     font-size: 34px;
-    max-width: 70%;
+    max-width: 66%;
+    letter-spacing: -1.55px;
 }
 .product-detail__content {
     @extend .clearfix;
     margin-bottom: 50px;
 }
 .product-detail__leftside {
-    padding: 0 30px;
     float: left;
     width: 50%;
 }
 .product-detail__rightside {
-    padding: 0 30px;
     float: right;
     width: 50%;
 }
@@ -144,7 +142,7 @@
 .slick-next {
     border-right: 4px solid var(--lime);
     transform: rotate(45deg);
-    right: -20px;
+    right: 10px;
 
     &:hover {
         transform: rotate(45deg) translate(4px,-4px);
@@ -153,7 +151,7 @@
 .slick-prev {
     transform: rotate(-45deg);
     border-left: 4px solid var(--lime);
-    left: -20px;
+    left: 10px;
 
     &:hover {
         transform: rotate(-45deg) translate(-4px,-4px);

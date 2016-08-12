@@ -3,15 +3,17 @@ block title
     | Brado Office
 block content
     main.main
-        h1.introduce__title
-            | titolo di questa pagina
-        .introduce__text
-            | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
-        ul.products__list
-            -var items = ['direzionali', 'attesa', 'hight_line', 'operative', 'lavoro', 'operativ', 'lavor']
-            each item in items
-                li.products__item
-                    a(class='products__link' href='#')
-                        .products__img-wrapper
-                            img(class='products__img' src='commons/images/' + item + '.jpg' alt=item)
-                        .products__name= item
+        .container--home.container
+            .introduce
+                h1.introduce__title
+                    | titolo di questa pagina
+                .introduce__text
+                    | PLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+            ul.products__list
+                -var items = ['direzionali', 'attesa', 'hight_line', 'operative', 'lavoro', 'operativ', 'lavor']
+                each item in items
+                    li.products__item
+                        a(class='products__link' href='#')
+                            .products__img-wrapper
+                                img(class='products__img' src='commons/images/' + item + '.jpg' alt=item)
+                            .products__name= item

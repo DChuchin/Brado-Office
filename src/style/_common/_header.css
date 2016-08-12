@@ -101,8 +101,10 @@
     color: var(--white);
     font-weight: 400;
     font-size: 18px;
+    letter-spacing: 0.8px;
     &:hover {
         background-color: var(--lime);
+        color:var(--black);
     }
 
     &--bg {
@@ -114,22 +116,33 @@
             vertical-align: middle;
         }
     }
-
+    &--bottom {
+        color: var(--lime);
+        box-shadow: inset 1px 0 0 0 gray;
+    }
 }
 
 .main-menu__text {
     display: inline-block;
     vertical-align: middle;
-    width: 80%;
+    width: 70%;
     height: auto;
     background: var(--lime-alpha);
-    padding: 5px;
+    padding: 3px;
     color: var(--black);
+    font-size: 17px;
 }
 .main-menu__search {
     float: left;
     width: 60%;
     height: 14%;
     box-shadow: inset 1px -1px 0 0px gray;
+    padding: 30px;
+    color: var(--white);
+}
+.main-menu__search-input {
+    background: rgba(33, 33, 33,.9);
+    border: none;
+    outline-color: var(--lime);
 
 }

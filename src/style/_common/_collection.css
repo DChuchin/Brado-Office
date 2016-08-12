@@ -3,61 +3,91 @@
 	color: var(--lime);
 	text-align: left;
 	text-transform: uppercase;
+	letter-spacing: -1.2px;
 }
 .product-category__image-wrapper {
 	position: relative;
-	width: 100%;
+	width: 101%;
 	overflow: hidden;
-	padding-top: 46%;
+	padding-top: 48%;
+	margin-bottom: 45px;
 }
 .product-category__image {
 	position: absolute;
 	width: 100%;
 	height: auto;
 	top: 50%;
-	left: 50%;
+	left: 48%;
 	transform: translate(-50%,-50%);
 }
 .product-category__content {
-	margin-bottom: 50px;
+	margin-bottom: 125px;
 }
 .collection__name-wrapper {
 	display: inline-block;
 	vertical-align: top;
-	width: 30%;
+	width: 31%;
 	text-align: left;
+	padding: 0 20px;
+}
+.collection__name {
+	font-size: 36px;
+	letter-spacing: -0.5px;
+}
+.collection__author {
+	font-size: 24px;
+	letter-spacing: -1.6px;
 }
 .collection__info {
 	display: inline-block;
 	vertical-align: top;
-	width: 30%;
+	width: 31%;
 	font-size: 22px;
 	font-weight: 600;
 	text-align: left;
+	letter-spacing: -0.15px;
+	line-height: 1.65;
+	padding: 0 20px;
 }
 .collection__download {
 	display: inline-block;
 	vertical-align: top;
-	width: 30%;
+	width: 31%;
 	text-align: left;
-	padding-left: 70px;
-	background:url('../images/rect.png') no-repeat 0 0;
+	padding: 0 20px;
+	padding-left: 80px;
+	padding-top: 10px;
+
+	&:before {
+		display: inline-block;
+		vertical-align: middle;
+		content: '';
+		width: 63px;
+		height: 63px;
+		background: var(--lime);
+		margin-right: 10px;
+	}
+}
+.collection__download-link {
+	display: inline-block;
+	vertical-align: middle;
+	letter-spacing: 0.6px;
 }
 .collection__list {
 	margin: 0;
 	padding: 0;
 	font-size: 0;
-	margin-bottom: 150px;
 }
 .collection__item {
 	display: inline-block;
 	width: 25%;
 	font-size: 22px;
-	padding-left: 15px;
-	padding-right: 15px;
-	margin-bottom: 50px;
+	padding: 0 5px;
+	margin-bottom: 150px;
 }
 .collection__link {
+	width: 100%;
+	display: inline-block;
 	text-decoration: none;
 }
 .collection__image-wrapper {

@@ -3,26 +3,28 @@ block title
     | Product Cateory
 block content
     main.main
-        h1.product-category__title
-            | Kind Family
-        .product-category__image-wrapper
-            img(class='product-category__image' src='commons/images/chairs.jpg')
-        .product-category__content
-            .collection__name-wrapper
-                h2.collection__name
-                    | Collezione Kind
-                h3.collection__author
-                    | designer Tomoko Azumi
-            .collection__info
-                | Brevissima descrizione tecnica della sedia / impiego di quali materiali / caratterisctiche principali costiuenti.
-            a(class='collection__download' download)
-                | SCARICA MANAGER PDF
-        ul.collection__list
-            -var items = ['Kind 202 AP', 'Kind 203 AP', 'Kind 203 APW', 'Kind 204 A', 'Kind 202 AP', 'Kind 203 AP', 'Kind 203 APW', 'Kind 204 A']
-            each item in items
-                li.collection__item
-                    a(class='collection__link' href='#')
-                        .collection__image-wrapper
-                            img(class='collection__image' src="commons/images/chair.jpg")
-                        .collection__item-name= item
-            
+        .container.container--product-category
+            h1.product-category__title
+                | Kind Family
+            .product-category__image-wrapper
+                img(class='product-category__image' src='commons/images/chairs.jpg')
+            .product-category__content
+                .collection__name-wrapper
+                    h2.collection__name
+                        | Collezione Kind
+                    h3.collection__author
+                        | designer Tomoko Azumi
+                .collection__info
+                    | Brevissima descrizione tecnica della sedia / impiego di quali materiali / caratterisctiche principali costiuenti.
+                .collection__download
+                    a(class='collection__download-link' download)
+                        | SCARICA MANAGER PDF
+            ul.collection__list
+                -var items = ['Kind 202 AP', 'Kind 203 AP', 'Kind 203 APW', 'Kind 204 A', 'Kind 202 AP', 'Kind 203 AP', 'Kind 203 APW', 'Kind 204 A']
+                each item in items
+                    li.collection__item
+                        a(class='collection__link' href='#')
+                            .collection__image-wrapper
+                                img(class='collection__image' src="commons/images/chair.jpg")
+                            .collection__item-name= item
+                

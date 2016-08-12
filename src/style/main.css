@@ -2,6 +2,8 @@
 
 @import "_vendor/slick.css";
 
+@import "_common/_fonts.css";
+
 @import "_misc/_variables.css";
 
 @import "_misc/_adjustment.css";
