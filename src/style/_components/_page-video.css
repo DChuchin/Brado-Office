@@ -1,4 +1,13 @@
+.page-video__main-title {
+    color: var(--lime);
+    font-size: 46px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: -1.4px;
+    margin-bottom: 85px;
+}
 .page-video__wrapper {
+    margin: 0 -14px;
     overflow: hidden;
     position: relative;
 }

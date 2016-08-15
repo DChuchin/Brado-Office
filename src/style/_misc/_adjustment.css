@@ -33,6 +33,11 @@ button {
 	&--product-detail {
 		padding: 78px;
 		text-align: left;
+		margin-bottom: 0;
+		padding-bottom: 87px;
+	}
+	&--video {
+		padding-top: 86px;
 	}
 }
 .clearfix {
