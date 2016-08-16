@@ -3,7 +3,7 @@
     position: relative;
     overflow: hidden;
     width: 100%;
-    padding-top: 54%;
+    padding-top: 53.5%;
 }
 .single-news__hero-img,
 .single-news__video {
@@ -16,6 +16,80 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
+.single-news__content-container {
+    padding: 104px 134px;
+    margin-bottom: 85px;
+}
+.single-news__title {
+    font-size: 47px;
+    text-transform: uppercase;
+    letter-spacing: -0.7px;
+    width: 50%;
+    color: var(--lime);
+}
+.single-news__text-wrapper {
+    padding: 60px 215px 60px 120px;
+    margin-bottom: 50px;
+}
+.single-news__date {
+    font-size: 20px;
+    letter-spacing: -0.8px;
+    font-weight: 700;
+    margin-bottom: 26px;
+}
+.single-news__text {
+    font-size: 22px;
+    line-height: 1.48;
+}
+.single-news__product-wrapper {
+    @extends .clearfix;
+    height: 545px;
+}
+.product__image-wrapper {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    width: 545px;
+    padding-top: 100%;
+}
+.product__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.product__info-wrapper {
+    float: right;
+    width: 48%;
+    padding: 35px;
+    padding-left: 50px;
+    height: 100%;
+
+    &:before {
+        content:'';
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+    }
+}
+.product__info {
+    display: inline-block;
+    vertical-align: middle;
+    width: 99%;
+}
+.product__name {
+    text-transform: uppercase;
+    font-size: 35px;
+    width: 40%;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 15px;
+    color: var(--lime);
+}
+.product__text {
+    font-size: 22px;
+    line-height: 1.46;
+}
 .single-news__carousel {
     padding: 50px;
     background: #f4f4f4;
@@ -24,6 +98,7 @@
     position: relative;
 }
 .single-news__slide-wrapper {
+    display: inline-block;
     position: relative;
     overflow: hidden;
     width: 100%;
@@ -47,4 +122,9 @@
     left: 50%;
     transform: translateX(-50%);
     box-shadow: 0 0 3px 0 #2c2829;
+}
+.single-news__bottom-text {
+    font-size: 22px;
+    padding: 105px 280px 130px 255px;
+    line-height: 1.46;
 }

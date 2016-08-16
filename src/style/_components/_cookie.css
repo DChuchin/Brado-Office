@@ -12,6 +12,12 @@
 .cookie__close-btn {
     display: inline-block;
 }
+.cookie__cross {
+    display: inline-block;
+}
 .cookie__link {
     display: inline-block;
+    text-transform: uppercase;
+    color: var(--lime);
+    text-decoration: none;
 }
