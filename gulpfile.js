@@ -8,6 +8,7 @@ var
     pxtorem      = require('postcss-pxtorem'),
     postcssExtends = require('postcss-extend'),
     cssimport    = require('postcss-import'),
+    easysprite   = require('postcss-easysprites'),
     sprites      = require('postcss-sprites').default,
     plumber      = require('gulp-plumber'),
     imageMin     = require('gulp-imagemin'),
@@ -34,12 +35,12 @@ var
         },
 
         img : {
-            location    : 'src/img/**/*',
-            stylesheet  : 'websitestructure/commons/css/',
-            images      : 'src/img/images/*.jpg',
-            logos       : 'src/img/logos/*.png',
-            sprites     : 'src/img/sprite/*.png',
-            destination : 'websitestructure/commons/images/'
+            location    : './src/img/**/*',
+            stylesheet  : './websitestructure/commons/css/',
+            images      : './src/img/images/**/*',
+            logos       : './src/img/logos/*.png',
+            sprites     : './src/img/sprite/',
+            destination : './websitestructure/commons/images/'
         },
 
         js : {
@@ -100,7 +101,12 @@ gulp.task('style', function () {
               mediaQuery: false,
               minPixelValue: 0
             }),
+            easysprite({
+                imagePath: paths.img.sprites,
+                spritePath: paths.img.destination
+            }),
             stylefmt,
+
     ];
     gulp.src(paths.css.compiled)
         .pipe(plumber())

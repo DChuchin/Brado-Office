@@ -21,6 +21,7 @@
     "gulp-sourcemaps": "^1.6.0",
     "imagemin-pngquant": "^5.0.0",
     "postcss-cssnext": "^2.7.0",
+    "postcss-easysprites": "^0.1.7",
     "postcss-extend": "^1.0.4",
     "postcss-import": "^8.1.2",
     "postcss-pxtorem": "^3.3.1",

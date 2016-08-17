@@ -1,5 +1,7 @@
 @import "_vendor/_normalize.css";
 
+@import "_vendor/brado-font.css";
+
 @import "_vendor/slick.css";
 
 @import "_common/_fonts.css";

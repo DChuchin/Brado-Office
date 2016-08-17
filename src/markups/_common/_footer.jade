@@ -26,7 +26,8 @@ footer.main-footer
                 -var socials = ['twitter', 'facebook', 'linkedin', 'youtube', 'pinterest']
                 each social in socials
                     li(class='footer-socials__item')
-                        a(class='footer-socials__link footer-socials__link--' + social href='#')= social
+                        a(class='footer-socials__link' href='#')
+                            i(class="fa fa-" + social aria-hidden="true")
             .footer-contacts__street
                 | 31049 Valdobbiadene
             .footer-contacts__city
