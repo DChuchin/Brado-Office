@@ -7,7 +7,7 @@
     margin-bottom: 85px;
 }
 .page-video__wrapper {
-    margin: 0 -14px;
+    margin: 0;
     overflow: hidden;
     position: relative;
 }
@@ -61,11 +61,42 @@
     text-transform: uppercase;
     margin-bottom: 110px;
     letter-spacing: -0.25px;
+    &--black {
+        width: 57%;
+        padding-top: 42px;
+        padding-left: 142px;
+        margin-bottom: 0;
+        padding-bottom: 150px;
+
+        & .page-video__title {
+            font-size: 34px;
+            line-height: 1.05;
+            font-weight: 600;
+            margin-bottom: 24px;
+            letter-spacing: 0;
+        }
+
+        & .page-video__text {
+            font-size: 22px;
+            font-weight: 400;
+            text-transform: none;
+            letter-spacing: 0.12px;
+            line-height: 1.35;
+        }
+    }
 }
 .page-video__title {
     &--white {
         color: var(--white);
     }
+    &--lime {
+        color: var(--lime);
+    }
+}
+.page-video__step {
+    font-size: 34px;
+    color: var(--white);
+    font-weight: 400;
 }
 .page-video__duration {
     text-transform: uppercase;

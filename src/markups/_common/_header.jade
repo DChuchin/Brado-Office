@@ -54,8 +54,8 @@ header.main-header
         a(class='main-menu__item' href='#')
             | news
         .main-menu__video-wrapper
-            video(class='main-menu__video' poster='commons/images/video-poster.jpg' preload='metadata')
-                source(src='')
+            video(class='main-menu__video' poster='commons/images/video-poster.jpg' preload='metadata'  controls='true')
+                source(src='https://www.youtube.com/embed/nkTu4QV4GJQ'  type="video/mp4")/
             .play-btn
         a(href="#" class="main-menu__item main-menu__item--bg main-menu__item--ricerca")
             .main-menu__text
@@ -79,16 +79,18 @@ header.main-header
             label
                 | trova una SEDIA
                 input(class="main-menu__search-input" type="search")
+                button.main-menu__search-arrow(type='submit')
+                    i(class="fa fa-chevron-right" aria-hidden="true")
         a(href="#" class="main-menu__item main-menu__item--bottom")
             | direzionali
         a(href="#" class="main-menu__item main-menu__item--bottom")
-            | direzionali
+            | attesa
         a(href="#" class="main-menu__item main-menu__item--bottom")
-            | direzionali
+            | high_line
         a(href="#" class="main-menu__item main-menu__item--bottom")
-            | direzionali
+            | operative
         a(href="#" class="main-menu__item main-menu__item--bottom")
-            | direzionali
+            | lavoro
             
     
         

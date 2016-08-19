@@ -1,10 +1,11 @@
 .privacy {
     color: var(--white);
-
+    padding-bottom: 22px;
 }
 .privacy__row {
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 7px;
+    font-weight: 300;
 }
 .privacy__list {
     margin: 0;

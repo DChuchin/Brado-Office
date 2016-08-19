@@ -94,7 +94,7 @@ gulp.task('style', function () {
                 'font', 'font-size', 'line-height', 'letter-spacing',
                 'padding', 'padding-top', 'padding-bottom', 'padding-left', 'padding-right',
                 'margin', 'margin-top', 'margin-bottom', 'margin-left', 'margin-right',
-                'border-radius', 'width', 'height'
+                'border-radius', 'width', 'height', 'top', 'left', 'right', 'bottom'
               ],
               selectorBlackList: [/^html$/],
               replace: true,
@@ -105,7 +105,7 @@ gulp.task('style', function () {
                 imagePath: paths.img.sprites,
                 spritePath: paths.img.destination
             }),
-            stylefmt,
+            stylefmt
 
     ];
     gulp.src(paths.css.compiled)

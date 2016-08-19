@@ -1,4 +1,7 @@
 select.languages-menu
     -var items =['it', 'en', 'ru', 'sp']
     each item in items
-        option.languages-menu__item= item
+        if (item=='it')
+            option( class="languages-menu__item" selected)= item
+        if (item!='it')
+            option( class="languages-menu__item" )= item

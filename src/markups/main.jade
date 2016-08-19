@@ -21,15 +21,15 @@ html(lang="en")
 		script(src="commons/js/vendor/jquery.magnific-popup.js")
 		script(src="commons/js/vendor/parallax.js")
 		script(src="commons/js/vendor/jquery.waypoints.js")
-		script(src="commons/js/vendor/sticky.js")
+		script(src="commons/js/vendor/jquery.sticky.js")
 		script(src="commons/js/vendor/slick.js")
 		
 	body
+		.shadow
 		.wrapper
 			include _common/_header
 			block content
 		include _common/_footer
-		
 		script(src="commons/js/main.js")
 
 	

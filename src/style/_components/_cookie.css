@@ -1,19 +1,46 @@
 .cookie {
     display: block;
     position: absolute;
-    right: 10px;
-    top: 15px;
-    width: 515px;
+    right: 9Px;
+    top: 18Px;
+    width: 515Px;
     padding: 15Px;
     color: #fff;
     background: rgba(33,33,33, .9);
     font-size: 14Px;
+    line-height: 1.5;
+    letter-spacing: 0.1Px;
 }
 .cookie__close-btn {
     display: inline-block;
+    cursor: pointer;
 }
 .cookie__cross {
     display: inline-block;
+    position: relative;
+    margin-right: 8Px;
+    & button {
+        text-indent: -9999Px;
+        background: none;
+        border: none;
+        color: #dddc00;
+        font-weight: 800;
+    }
+}
+.cookie__cross:after {
+    content: '';
+    width: 3Px;
+    display: inline-block;
+    height: 10Px;
+    background: #dddc00;
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 7Px;
+    left: 5Px;
+}
+.cookie__cross:before {
+    @extend .cookie__cross:after;
+    transform: rotate(45deg);
 }
 .cookie__link {
     display: inline-block;

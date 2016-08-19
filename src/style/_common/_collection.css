@@ -64,7 +64,8 @@
 		content: '';
 		width: 63px;
 		height: 63px;
-		background: var(--lime);
+		background: url('../images/rect.png') no-repeat;
+		background-size: cover;
 		margin-right: 10px;
 	}
 }
@@ -72,6 +73,9 @@
 	display: inline-block;
 	vertical-align: middle;
 	letter-spacing: 0.6px;
+	color: initial;
+	text-decoration: none;
+
 }
 .collection__list {
 	margin: 0;
