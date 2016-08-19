@@ -230,8 +230,28 @@ html {
 .collection__download-link {
 	letter-spacing: 0;
 }
+.collection__item {
+	width: 50%;
+}
 /*------- 04 page -------*/
 
+.container--product-detail {
+	padding: 49px 55px;
+	margin-bottom: 100px;
+}
+
+.product-detail__title {
+	font-size: 40px;
+	margin-right: 50px;
+	text-align: center;
+	max-width: initial;
+}
+.product-detail__subtitle {
+	font-size: 26px;
+	letter-spacing: initial;
+	font-weight: 400;
+	max-width: initial;
+}
 .product-detail__leftside {
 	float: none;
 	width: 100%;
