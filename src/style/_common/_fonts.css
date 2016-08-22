@@ -19,3 +19,10 @@
   src: local('Gotham'), local('Gotham-book'),
        url('../Font/Gotham/Gotham-Book.otf');
 }
+@font-face {
+  font-family: 'Gotham';
+  font-style: normal;
+  font-weight: 900;
+  src: local('Gotham'), local('Gotham-Black'),
+       url('../Font/Gotham/Gotham-Black.otf');
+}

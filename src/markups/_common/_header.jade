@@ -11,15 +11,23 @@ header.main-header
                     | chiudi
     .compact-header
         include _components/_header-logo
+        button.search-btn
+            i.fa.fa-search
         include _components/_gamburger
-    .mobile-menu  
+        form.mobile-search
+            label.mobile-search__label
+                input.mobile-search__input(placeholder="trova una sedia")
+            button(type="submit").mobile-search__submit
+                i.fa.fa-search
+    .mobile-menu
         ul.mobile-menu__list
-            -var items = ['prodotti', 'filiera', 'news', 'valori', 'contatti', 'language']
+            -var items = ['prodotti', 'filiera', 'news', 'valori', 'contatti']
             each item in items
                 li.mobile-menu__item
                     a(class='mobile-menu__link' href='#')= item=='language'? '' : item
                     -if (item == 'prodotti')
                         .mobile-menu__arrow
+                            i.fa.fa-angle-down
                         ul.mobile-menu__inner-list
                             -var arr = ['direzionali', 'attesa', 'high_line', 'operative', 'lavoro']
                             each i in arr
@@ -27,22 +35,23 @@ header.main-header
                                     a(class='mobile-menu__inner-link' href='#')= i
                     -if (item == 'valori')
                         .mobile-menu__arrow
+                            i.fa.fa-angle-down
                         ul.mobile-menu__inner-list
                             -var arr = ['ricerca', 'collaborazione', 'accuratezza', 'ergonomia', 'flessibilita', 'organizzazione']
                             each i in arr
                                 li.mobile-menu__inner-item
                                     a(class='mobile-menu__inner-link' href='#')= i
-                    -if (item == 'language')
-                        ul.mobile-menu__langs
-                            -var langs = ['en', 'it']
-                            each lang in langs
-                                li.mobile-menu__lang
-                                    a(class='mobile-menu__lang-link' href='#')= lang
+        ul.mobile-menu__langs
+            -var langs = ['it', 'en']
+            each lang in langs
+                li.mobile-menu__lang
+                    a(class='mobile-menu__lang-link' + ((lang == 'it') ? ' active' : '') href='#')= lang
         ul.mobile-menu__socials
             -var socials = ['twitter', 'facebook', 'linkedin', 'youtube', 'pinterest']
             each social in socials
                 li(class='socials__item')
-                    a(class='socials__link socials__link--' + social href='#')= social
+                    a(class='socials__link socials__link--' + social href='#')
+                        i(class="fa fa-" + social)
     .main-menu
         .logo__wrapper
             include _components/_header-logo

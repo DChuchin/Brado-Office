@@ -78,7 +78,6 @@
     width: 99%;
 }
 .product__name {
-    text-transform: uppercase;
     font-size: 35px;
     width: 40%;
     font-weight: 600;
@@ -90,9 +89,11 @@
     font-size: 22px;
     line-height: 1.46;
 }
-.single-news__carousel {
+.single-news__carousel-wrapper {
     padding: 50px;
     background: #f4f4f4;
+}
+.single-news__carousel {
 }
 .single-news__slide {
     position: relative;
