@@ -69,8 +69,16 @@ block content
         .single-news__bottom-text
             | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis culpa libero quae dolore ut, veniam error minima nemo cumque voluptatibus repudiandae totam ipsa pariatur blanditiis natus architecto at harum, aut ad possimus ratione vero incidunt maiores non. Sed, saepe, illum. Necessitatibus laboriosam numquam in ab! Necessitatibus ratione aliquid cum nulla.
         .single-news__video-wrapper
-            video(poster='commons/images/hero.jpg').single-news__video
-                source
+            video( controls width="100%" height="100%" class='single-news__video superembed-force' poster='commons/images/hero-poster.jpg' preload='metadata')
+                source(src="commons/video/Brado Office Interzum 2015-SD.mp4" type="video/mp4")/
+                source(src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.webm" type="video/webm")/
+                source(src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.ogv" type="video/ogg")/
+                object(type="application/x-shockwave-flash" data="http://releases.flowplayer.org/swf/flowplayer-3.2.1.swf" width="640" height="360")
+                    param(name="movie" value="http://releases.flowplayer.org/swf/flowplayer-3.2.1.swf")/
+                    param(name="allowFullScreen" value="true")/
+                    param(name="wmode" value="transparent")/
+                    param(ame="flashVars" value="config={'playlist':['http%3A%2F%2Fsandbox.thewikies.com%2Fvfe-generator%2Fimages%2Fbig-buck-bunny_poster.jpg',{'url':'http%3A%2F%2Fclips.vorwaerts-gmbh.de%2Fbig_buck_bunny.mp4','autoPlay':false}]}")/
+                    img(alt="Big Buck Bunny" src="commons/images/hero-poster.jpg" width="100%" height="auto" title="No video playback capabilities, please download the video below")/
             
                     
             

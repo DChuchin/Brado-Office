@@ -4,19 +4,22 @@ var accordion = (function() {
     };
 
     function _setUpListeners() {
-        $('.mobile-menu__item').on('click', _toggleAcc);    
+        $('.mobile-menu__link').on('click', _toggleAcc);    
     };
 
     function _toggleAcc(e) {
+
         
         var $this = $(this),
-            innerList = $this.find('.mobile-menu__inner-list'),
-            otherParents = $this.siblings('.mobile-menu__item'),
+            parent = $this.closest('.mobile-menu__item'),
+            innerList = parent.find('.mobile-menu__inner-list'),
+            otherParents = parent.siblings('.mobile-menu__item'),
             otherLists = otherParents.find('.mobile-menu__inner-list'),
-            arrow = $this.find('.fa'),
+            arrow = parent.find('.fa'),
             otherArrows = otherParents.find('.fa');
 
         if (innerList.length) {
+            e.stopPropagation();
             e.preventDefault();
             innerList.stop(true, true).slideToggle(300);
             otherLists.stop(true, true).slideUp(300);
@@ -82,12 +85,14 @@ function slickInit() {
                     slidesToScroll: 1
                 }
             }
-        ]
+        ],
+        autoplay: 4000
     });
     $('.product-detail__main-slider').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
-        infinite: true
+        infinite: true,
+        autoplay: 4000
     });
     $('.single-news__carousel').slick({
         slidesToShow: 3,
@@ -101,7 +106,8 @@ function slickInit() {
                     slidesToScroll: 1
                 }
             }
-        ]
+        ],
+        autoplay: 4000
     });
 };
 

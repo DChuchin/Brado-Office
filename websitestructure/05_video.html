@@ -3,7 +3,7 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<!--[if gt IE 8]> <html class="no-js"> <![endif]-->
 <html lang="en">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -13,20 +13,23 @@
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700"/>
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300"/>
 		<link rel="stylesheet" href="commons/css/main.css"/>
+		<link rel="stylesheet" href="commons/css/responsive.css"/>
 		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous"/>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<script>window.jQuery || document.write('<script src="commons/js/vendor/jquery-1.12.4.js"><\/script>');</script>
 		<script src="commons/js/vendor/jquery.formstyler.js"></script>
 		<script src="commons/js/vendor/jquery.magnific-popup.js"></script>
-		<script src="commons/js/vendor/parallax.js"></script>
-		<script src="commons/js/vendor/jquery.waypoints.js"></script>
 		<script src="commons/js/vendor/jquery.sticky.js"></script>
-		<script src="commons/js/vendor/slick.js"></script>
+		<script src="commons/js/vendor/slick.js"></script><!--[if gt IE 8]>	
+		<script src="commons/js/vendor/superembed.js"></script><![endif]-->
+		<!--[if lt IE 9]>
+		<script src="commons/js/vendor/html5shiv.min.js"></script>
+		<script src="commons/js/vendor/respond.min.js"></script><![endif]-->
 	</head>
 	<body>
-		<div class="shadow"></div>
 		<div class="wrapper">
-			<header class="main-header">
+			<div class="shadow"></div>
+			<div class="main-header">
 				<div class="cookie">
 					<div class="cookie__text">Questo sito utilizza cookie di analisi e di prestazione per migliorarea navigazione degli utenti. Proseguendo la navigazione acconsenti all’uso dei cookie. Per maggiori informazioni clicca qui.</div>
 					<div class="cookie__close-btn">
@@ -105,10 +108,17 @@
 						</select>
 					</div><a href="#" class="main-menu__item">prodotti</a><a href="#" class="main-menu__item">filiera</a><a href="#" class="main-menu__item">news</a>
 					<div class="main-menu__video-wrapper">
-						<video poster="commons/images/video-poster.jpg" preload="metadata" controls="true" class="main-menu__video">
-							<source src="https://www.youtube.com/embed/nkTu4QV4GJQ" type="video/mp4"/>
-						</video>
-						<div class="play-btn"></div>
+						<video width="100%" height="100%" poster="commons/images/video-poster.jpg" preload="metadata" controls="true" class="main-menu__video superembed-square">
+							<source src="commons/video/Brado Office Interzum 2015-SD.mp4" type="video/mp4"/>
+							<source src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.webm" type="video/webm"/>
+							<source src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.ogv" type="video/ogg"/>
+							<object type="application/x-shockwave-flash" data="http://releases.flowplayer.org/swf/flowplayer-3.2.1.swf" width="640" height="360">
+								<param name="movie" value="http://releases.flowplayer.org/swf/flowplayer-3.2.1.swf"/>
+								<param name="allowFullScreen" value="true"/>
+								<param name="wmode" value="transparent"/>
+								<param ame="flashVars" value="config={'playlist':['http%3A%2F%2Fsandbox.thewikies.com%2Fvfe-generator%2Fimages%2Fbig-buck-bunny_poster.jpg',{'url':'http%3A%2F%2Fclips.vorwaerts-gmbh.de%2Fbig_buck_bunny.mp4','autoPlay':false}]}"/><img alt="Big Buck Bunny" src="http://sandbox.thewikies.com/vfe-generator/images/big-buck-bunny_poster.jpg" width="640" height="360" title="No video playback capabilities, please download the video below"/>
+							</object>
+						</video><i aria-hidden="true" class="video-btn video-btn--menu fa fa-play-circle"></i>
 					</div><a href="#" class="main-menu__item main-menu__item--bg main-menu__item--ricerca">
 						<div class="main-menu__text">ricerca</div></a><a href="#" class="main-menu__item main-menu__item--bg main-menu__item--collaborazione">
 						<div class="main-menu__text">collaborazione</div></a><a href="#" class="main-menu__item main-menu__item--bg main-menu__item--accuratezza">
@@ -123,7 +133,7 @@
 						</label>
 					</form><a href="#" class="main-menu__item main-menu__item--bottom">direzionali</a><a href="#" class="main-menu__item main-menu__item--bottom">attesa</a><a href="#" class="main-menu__item main-menu__item--bottom">high_line</a><a href="#" class="main-menu__item main-menu__item--bottom">operative</a><a href="#" class="main-menu__item main-menu__item--bottom">lavoro</a>
 				</div>
-			</header>
+			</div>
 			<main class="main--pages main--black">
 				<div class="container container--video">
 					<h2 class="page-video__main-title">la filiera produttiva</h2>
@@ -139,10 +149,16 @@
 						<div class="page-video__text">Lo svolgimento di rigorosi test preliminari, ed il controllo di qualità in fase operativa, offrono la possibilità di garantire standard sempre elevatissimi.</div>
 					</div>
 					<div class="page-video__wrapper">
-						<video poster="commons/images/page-video-poster.jpg" preload="metadata" class="page-video__video">
-							<source src=""/>
-						</video>
-						<button type="button" class="page-video__btn page-video__btn--lime"></button>
+						<video controls="controls" width="100%" height="100%" poster="commons/images/page-video-poster.jpg" preload="metadata" class="page-video__video superembed-force"></video>
+						<source src="commons/video/Brado Office Interzum 2015-SD.mp4" type="video/mp4"/>
+						<source src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.webm" type="video/webm"/>
+						<source src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.ogv" type="video/ogg"/>
+						<object type="application/x-shockwave-flash" data="http://releases.flowplayer.org/swf/flowplayer-3.2.1.swf" width="640" height="360">
+							<param name="movie" value="http://releases.flowplayer.org/swf/flowplayer-3.2.1.swf"/>
+							<param name="allowFullScreen" value="true"/>
+							<param name="wmode" value="transparent"/>
+							<param ame="flashVars" value="config={'playlist':['http%3A%2F%2Fsandbox.thewikies.com%2Fvfe-generator%2Fimages%2Fbig-buck-bunny_poster.jpg',{'url':'http%3A%2F%2Fclips.vorwaerts-gmbh.de%2Fbig_buck_bunny.mp4','autoPlay':false}]}"/><img alt="" src="commons/images/page-video-poster.jpg" width="100%" height="auto" title="No video playback capabilities, please download the video below"/>
+						</object>
 					</div>
 					<div class="page-video__info page-video__info--black">
 						<div class="page-video__step">step 4</div>
@@ -150,10 +166,16 @@
 						<div class="page-video__text">Lo svolgimento di rigorosi test preliminari, ed il controllo di qualità in fase operativa, offrono la possibilità di garantire standard sempre elevatissimi.</div>
 					</div>
 					<div class="page-video__wrapper">
-						<video poster="commons/images/page-video-poster.jpg" preload="metadata" class="page-video__video">
-							<source src=""/>
-						</video>
-						<button type="button" class="page-video__btn page-video__btn--lime"></button>
+						<video controls="controls" width="100%" height="100%" poster="commons/images/page-video-poster.jpg" preload="metadata" class="page-video__video superembed-force"></video>
+						<source src="commons/video/Brado Office Interzum 2015-SD.mp4" type="video/mp4"/>
+						<source src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.webm" type="video/webm"/>
+						<source src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.ogv" type="video/ogg"/>
+						<object type="application/x-shockwave-flash" data="http://releases.flowplayer.org/swf/flowplayer-3.2.1.swf" width="640" height="360">
+							<param name="movie" value="http://releases.flowplayer.org/swf/flowplayer-3.2.1.swf"/>
+							<param name="allowFullScreen" value="true"/>
+							<param name="wmode" value="transparent"/>
+							<param ame="flashVars" value="config={'playlist':['http%3A%2F%2Fsandbox.thewikies.com%2Fvfe-generator%2Fimages%2Fbig-buck-bunny_poster.jpg',{'url':'http%3A%2F%2Fclips.vorwaerts-gmbh.de%2Fbig_buck_bunny.mp4','autoPlay':false}]}"/><img alt="" src="commons/images/page-video-poster.jpg" width="100%" height="auto" title="No video playback capabilities, please download the video below"/>
+						</object>
 					</div>
 					<div class="page-video__info page-video__info--black">
 						<div class="page-video__step">step 5</div>

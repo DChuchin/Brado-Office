@@ -1,0 +1,126 @@
+
+#responsivator_2 span {
+	cursor: pointer;
+}
+
+.txt_prototipo { font-size:14px;}
+.txt_progetto  { font-size:24px; font-weight:bold;}
+.txt_versione  { font-size:12px;}
+.txt_devices  { font-size:12px;}
+.txt_pagine  { font-size:12px;}
+.txt_options  { font-size:12px; font-weight:normal;}
+.list-group-item.active,
+.list-group-item.active:hover,
+.list-group-item.active:focus {
+  background-color: #ff5000;
+  border-color: #ff5000;
+}            
+
+.desktop-ico { 
+    background: url(../imgs/desktop.png) bottom center no-repeat;  
+    width: 50px;
+    height:30px;
+    display: block;
+    float:left;
+}
+
+#desktop.active .desktop-ico { 
+    background: url(../imgs/desktop-active.png) bottom center no-repeat;  
+    width: 50px;
+    height:30px;
+    display: block;
+    float:left;
+}            
+
+.tablet-landscape-ico { 
+    background: url(../imgs/t-o.png) bottom center no-repeat;  
+    width: 40px;
+    height:30px;
+    display: block;
+    float:left;
+}
+
+#tablet-landscape.active .tablet-landscape-ico { 
+    background: url(../imgs/t-o-active.png) bottom center no-repeat;  
+    width: 40px;
+    height:30px;
+    display: block;
+    float:left;
+}            
+
+.tablet-portrait-ico { 
+    background: url(../imgs/t-v.png) bottom center no-repeat;  
+    width: 40px;
+    height:30px;
+    display: block;
+    float:left;
+}
+
+#tablet-portrait.active .tablet-portrait-ico { 
+    background: url(../imgs/t-v-active.png) bottom center no-repeat;  
+    width: 40px;
+    height:30px;
+    display: block;
+    float:left;
+}
+
+.iphone-landscape-ico { 
+    background: url(../imgs/p-o.png) bottom center no-repeat;  
+    width: 40px;
+    height:30px;
+    display: block;
+    float:left;
+}
+
+#iphone-landscape.active .iphone-landscape-ico { 
+    background: url(../imgs/p-o-active.png) bottom center no-repeat;  
+    width: 40px;
+    height:30px;
+    display: block;
+    float:left;
+}
+
+.iphone-portrait-ico { 
+    background: url(../imgs/p-v.png) bottom center no-repeat;  
+    width: 30px;
+    height:30px;
+    display: block;
+    float:left;
+}
+
+#iphone-portrait.active .iphone-portrait-ico { 
+    background: url(../imgs/p-v-active.png) bottom center no-repeat;  
+    width: 30px;
+    height:30px;
+    display: block;
+    float:left;
+}
+
+
+
+
+
+
+.btn-warning {
+    background-color: #ff5000;
+    border-color: #ff6722;
+    color: #fff;
+}
+
+.btn-warning:hover,
+.btn-warning:focus,
+.btn-warning.focus,
+.btn-warning:active,
+.btn-warning.active,
+.open > .dropdown-toggle.btn-warning {
+  color: #fff;
+  background-color: #ff6722;
+  border-color: #ff6722;
+}
+
+
+.toggle.btn-xs {
+    min-width: 85px;
+}
+
+

@@ -2,7 +2,7 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<!--[if gt IE 8]> <html class="no-js"> <![endif]-->
 html(lang="en")
 	head
 		meta(http-equiv = 'Content-Type', content = 'text/html; charset=utf-8')
@@ -13,20 +13,25 @@ html(lang="en")
 		link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Montserrat:400,700")
 		link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300")
 		link(rel="stylesheet", href="commons/css/main.css")
+		link(rel="stylesheet", href="commons/css/responsive.css")
 		link(href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css", rel="stylesheet", integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1", crossorigin="anonymous")
 		script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js')
 		script.
 			window.jQuery || document.write('<script src="commons/js/vendor/jquery-1.12.4.js"><\/script>');
 		script(src="commons/js/vendor/jquery.formstyler.js")
 		script(src="commons/js/vendor/jquery.magnific-popup.js")
-		script(src="commons/js/vendor/parallax.js")
-		script(src="commons/js/vendor/jquery.waypoints.js")
 		script(src="commons/js/vendor/jquery.sticky.js")
 		script(src="commons/js/vendor/slick.js")
-		
+		<!--[if gt IE 8]>	
+		script(src="commons/js/vendor/superembed.js")
+		<![endif]-->
+		<!--[if lt IE 9]>
+		script(src="commons/js/vendor/html5shiv.min.js")
+		script(src="commons/js/vendor/respond.min.js")
+		<![endif]-->
 	body
-		.shadow
 		.wrapper
+			.shadow
 			include _common/_header
 			block content
 		include _common/_footer

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>HTML</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8;"/>
+
+		<link rel="stylesheet" type="text/css" href="system/responsive/normalize.css"/>
+		<link rel="stylesheet" type="text/css" href="system/responsive/preview.css"/>
+		<link rel="stylesheet" type="text/css" href="system/responsive/preview-responsive.css"/>
+
+        <script src="system/js/jquery-1.12.0.min.js"></script>
+
+        <link rel="stylesheet" href="system/css/bootstrap.min.css">
+
+		<link rel="stylesheet" href="system/css/BootSideMenu.css">
+		<!-- HTML5 shim e Respond.js per rendere compatibile l'HTML 5 in IE8 -->
+		<!-- ATTENZIONE: Respond.js non funziona se la pagina viene visualizzata in locale file:// -->
+		<!--[if lt IE 9]>
+		<script src="system/js/html5shiv-printshiv.min.js"></script>
+		<script src="system/js/respond.min.js"></script>
+		<![endif]-->
+		<script src="system/js/bootstrap.min.js"></script>
+		<script src="system/js/BootSideMenu.js"></script>
+
+		<link href="system/bootstrap-toggle/css/bootstrap-toggle.css" rel="stylesheet">
+		<script src="system/bootstrap-toggle/js/bootstrap-toggle.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="system/css/additional.css"/>
+
+		<script src="system/js/script.js"></script>
+
+	</head>
+
+	<body id='fullscreen-preview'>
+
+
+		<div id="responsive_controller" style="width: 300px;">
+			<div style="">
+				<div style="margin-bottom: 10px;margin-left:5px;"><span class="txt_devices">Devices</span></div>
+				<div id="responsivator_2" style="height: 30px;margin-left:40px;">
+					<span class="" id="desktop"           style="margin-left:10px;"><span class="desktop-ico" title="Desktop"></span></span>
+					<span class="" id="tablet-landscape"  style="margin-left:10px;"><span class="tablet-landscape-ico" title="Tablet Orizzontale">&nbsp;&nbsp;</span></span>
+					<span class="" id="tablet-portrait"   style="margin-left:10px;"><span class="tablet-portrait-ico" title="Tablet Verticale" >&nbsp;&nbsp;</span></span>
+					<span class="" id="iphone-landscape"  style="margin-left:10px;"><span class="iphone-landscape-ico" title="Smartphone Orizzontale"  >&nbsp;&nbsp;</span></span>
+					<span class="" id="iphone-portrait"   style="margin-left:10px;"><span class="iphone-portrait-ico" title="Smartphone Verticale" >&nbsp;&nbsp;</span></span>
+				</div>
+			</div>
+
+			<div style="margin-top:10px;clear:both;">
+				<div style="margin-bottom: 10px;margin-left:5px;"><span class="txt_pagine">Pages</span></div>
+			</div>
+
+			<div class="list-group">
+                <a id="PAGE1" href="../websitestructure/index.html" onclick="javascript:checkandclose('PAGE1','index.html');return false;" target="previewframe"  class="list-group-item" >&raquo;Homepage</a>
+                <a id="PAGE2" href="../websitestructure/02_page-lime.html"     onclick="javascript:checkandclose('PAGE2','02_page-lime.html');return false;" target="previewframe"  class="list-group-item" >&raquo;02_page</a>
+                <a id="PAGE1" href="../websitestructure/03_product_category.html" onclick="javascript:checkandclose('PAGE3','03_product_category.html');return false;" target="previewframe"  class="list-group-item" >&raquo;03_page</a>
+                <a id="PAGE2" href="../websitestructure/04_product_detail.html"     onclick="javascript:checkandclose('PAGE4','04_product_detail.html');return false;" target="previewframe"  class="list-group-item" >&raquo;04_page</a>
+                <a id="PAGE1" href="../websitestructure/05_video.html" onclick="javascript:checkandclose('PAGE5','05_video.html');return false;" target="previewframe"  class="list-group-item" >&raquo;05_page</a>
+                <a id="PAGE2" href="../websitestructure/06_news.html"     onclick="javascript:checkandclose('PAGE6','06_news.html');return false;" target="previewframe"  class="list-group-item" >&raquo;06_page</a>
+                <a id="PAGE1" href="../websitestructure/07_news-singl.html" onclick="javascript:checkandclose('PAGE7','07_news-singl.html');return false;" target="previewframe"  class="list-group-item" >&raquo;07_page</a>
+			</div>
+
+			<div style="margin-top:10px;clear:both;margin-left:10px;" class="txt_options"><input type="hidden" name="autoclose" id="autoclose" value="N"></div>
+
+		</div>
+
+
+		<div id="iframelive" class="no-responsive tablet-landscape" >
+			<div id="preview-wrapper" >
+				<iframe id="preview" frameborder="0" name="previewframe" src="01_homepage.html" data-src=""> </iframe>
+			</div>
+		</div>
+
+
+
+
+	</body>
+</html>
+

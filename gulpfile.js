@@ -6,6 +6,9 @@ var
     postcss      = require('gulp-postcss'),
     cssnext      = require('postcss-cssnext'),
     pxtorem      = require('postcss-pxtorem'),
+    rempx        = require('pixrem'),
+    cssgrace     = require('cssgrace'),
+    oldie        = require('oldie'),
     postcssExtends = require('postcss-extend'),
     cssimport    = require('postcss-import'),
     easysprite   = require('postcss-easysprites'),
@@ -31,7 +34,8 @@ var
         css : {
             location    : 'src/style/**/*.css',
             compiled    : 'src/style/main.css',
-            destination : 'websitestructure/commons/css/'
+            destination : 'websitestructure/commons/css/',
+            responsive  : 'src/style/_common/_responsive.css'
         },
 
         img : {
@@ -105,6 +109,18 @@ gulp.task('style', function () {
                 imagePath: paths.img.sprites,
                 spritePath: paths.img.destination
             }),
+            oldie({
+                unOpacity: {
+                    method: 'copy'
+                },
+                opacity: {
+                    method: 'copy'
+                },
+                rem:{
+                    rootValue: 14,
+                    replace: false
+                },
+            }),
             stylefmt
 
     ];
@@ -116,6 +132,34 @@ gulp.task('style', function () {
         .pipe(gulp.dest(paths.css.destination));
 });
 
+gulp.task('responsive', function() {
+    var processors = [
+        cssimport,
+        cssnext({ browsers: ['last 2 versions', '> 1%', 'iOS > 7', 'Firefox ESR', 'Opera 12.1', 'ie >= 7'] }),
+        postcssExtends,
+        pxtorem({
+          rootValue: 14,
+          unitPrecision: 5,
+          propWhiteList: [
+            'font', 'font-size', 'line-height', 'letter-spacing',
+            'padding', 'padding-top', 'padding-bottom', 'padding-left', 'padding-right',
+            'margin', 'margin-top', 'margin-bottom', 'margin-left', 'margin-right',
+            'border-radius', 'width', 'height', 'top', 'left', 'right', 'bottom'
+          ],
+          selectorBlackList: [/^html$/],
+          replace: true,
+          mediaQuery: false,
+          minPixelValue: 0
+        }),
+        stylefmt
+    ];
+    gulp.src(paths.css.responsive)
+        .pipe(plumber())
+        .pipe(sourcemaps.init())
+        .pipe(postcss(processors))
+        .pipe(sourcemaps.write())
+        .pipe(gulp.dest(paths.css.destination));
+});
 
 /*---------------------- images ---------------------------*/
 
@@ -177,4 +221,4 @@ gulp.task('watch', function() {
     gulp.watch(paths.browserSync.watchPaths).on('change', browserSync.reload);
 });
 
-gulp.task('default', ['jade', 'style', 'js', 'plugins', 'img-min', 'watch', 'sync']);
+gulp.task('default', ['jade', 'style', 'js', 'plugins', 'responsive','img-min', 'watch', 'sync']);

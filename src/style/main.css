@@ -36,4 +36,4 @@
 
 @import "_common/_product-details.css";
 
-@import "_common/_responsive.css";
+@import "_common/_ie8.css";

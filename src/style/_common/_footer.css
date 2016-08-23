@@ -1,4 +1,5 @@
 .main-footer {
+    margin-top: -200px;
     background: var(--black);
     padding: 35px 80px;
     box-sizing: border-box;
@@ -56,6 +57,7 @@
     margin-bottom: 10px;
 }
 .footer-addresses__subname {
+    margin-bottom: 10Px;
     margin-bottom: 10px;
 }
 .footer-addresses__address {

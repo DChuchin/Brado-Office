@@ -1,0 +1,213 @@
+/* fix for preview.css remove after publish demo-responsive*/
+#preview-bar {
+	__border-bottom: 2px solid #3a3a3a;
+}
+
+/* ============= RESPONSIVATOR ===========================================================================================================*/
+#responsivator {
+    __background-color: #2E2E2E;
+    __background: #0e0e0e; /* Old browsers */
+    __background: -moz-linear-gradient(top, #0e0e0e 12%, #7d7e7d 100%); /* FF3.6+ */
+    __background: -webkit-gradient(linear, left top, left bottom, color-stop(12%,#0e0e0e), color-stop(100%,#7d7e7d)); /* Chrome,Safari4+ */
+    __background: -webkit-linear-gradient(top, #0e0e0e 12%,#7d7e7d 100%); /* Chrome10+,Safari5.1+ */
+    __background: -o-linear-gradient(top, #0e0e0e 12%,#7d7e7d 100%); /* Opera 11.10+ */
+    __background: -ms-linear-gradient(top, #0e0e0e 12%,#7d7e7d 100%); /* IE10+ */
+    __background: linear-gradient(to bottom, #0e0e0e 12%,#7d7e7d 100%); /* W3C */
+    __filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0e0e0e', endColorstr='#7d7e7d',GradientType=0 ); /* IE6-9 */
+    height: 18px;
+    ___width: 119px;
+    list-style: none;
+    z-index: 100;
+    position: relative;
+    top: 4px;
+    left: -20px;
+    opacity: .9;
+    box-shadow: 0 0 10px #000;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border: 1px solid #181818;
+    padding: 4px;
+    margin-left: 10px;
+    __position: absolute;
+    z-index: 10;
+    __top: 27px;
+    left: 20px;
+    padding-left: 12px;
+    display: none;
+}
+.ie #responsivator {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+/*.webkit #responsivator {
+		top: 54px;
+}*/
+#responsivator li {
+    width: 20px;
+    height: 16px;
+    cursor: pointer;
+    margin-left: 2px;
+    float: left;
+}
+.webkit #responsivator li {
+    width: 19px;
+    height: 16px;
+}
+
+
+
+#pages-bar {
+	border-bottom: 2px solid #3a3a3a;
+}
+
+/* ============= PAGES ===========================================================================================================*/
+#pagelistcontainer {
+    __background-color: #2E2E2E;
+    __background: #0e0e0e; /* Old browsers */
+    __background: -moz-linear-gradient(top, #0e0e0e 12%, #7d7e7d 100%); /* FF3.6+ */
+    __background: -webkit-gradient(linear, left top, left bottom, color-stop(12%,#0e0e0e), color-stop(100%,#7d7e7d)); /* Chrome,Safari4+ */
+    __background: -webkit-linear-gradient(top, #0e0e0e 12%,#7d7e7d 100%); /* Chrome10+,Safari5.1+ */
+    __background: -o-linear-gradient(top, #0e0e0e 12%,#7d7e7d 100%); /* Opera 11.10+ */
+    __background: -ms-linear-gradient(top, #0e0e0e 12%,#7d7e7d 100%); /* IE10+ */
+    __background: linear-gradient(to bottom, #0e0e0e 12%,#7d7e7d 100%); /* W3C */
+    __filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0e0e0e', endColorstr='#7d7e7d',GradientType=0 ); /* IE6-9 */
+    height: 18px;
+    ___width: 119px;
+    list-style: none;
+    z-index: 100;
+    position: relative;
+    top: 4px;
+    left: -20px;
+    opacity: .9;
+    padding: 4px;
+    margin-left: 10px;
+    __position: absolute;
+    z-index: 10;
+    __top: 27px;
+    left: 20px;
+    padding-left: 12px;
+}
+.ie #pagelistcontainer {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+/*.webkit #responsivator {
+		top: 54px;
+}*/
+#pagelistcontainer li {
+    width: 20px;
+    height: 16px;
+    cursor: pointer;
+    margin-left: 2px;
+    float: left;
+}
+.webkit #pagelistcontainer li {
+    width: 19px;
+    height: 16px;
+}
+
+
+
+
+
+
+
+
+/*#frameWrapper {
+	position: relative;
+	z-index: 100;
+
+}*/
+#frame { overflow-x: hidden; opacity: 1;}
+
+
+#iframelive.tablet-landscape,
+#iframelive.tablet-portrait,
+#iframelive.iphone-landscape,
+#iframelive.iphone-portrait {
+    height: 94%;
+    overflow: auto;
+}
+#iframelive {
+    height: 100%;
+    background: #ffffff;
+}
+
+/* DESKTOP  */
+#iframelive.desktop iframe {
+    width: 100%;
+    margin: 0;
+    height: 100%;
+}
+#iframelive.desktop #preview-wrapper {
+    background: none;
+    margin: 0;
+    /*overflow: auto;*/
+    height: 100%;
+}
+#iframelive.desktop {
+
+}
+
+/* tablet-landscape  */
+#iframelive.tablet-landscape iframe {
+    width: 1039px;
+    height: 690px !important;
+    margin: 51px 0 0 80px;
+}
+#iframelive.tablet-landscape #preview-wrapper {
+    background: url('pad-land-1d1d1d.jpg');
+    width: 1242px;
+    height: 798px;
+    margin: 20px auto;
+    overflow: auto;
+}
+#iframelive.tablet-landscape #preview-wrapper iframe {
+    overflow-x: hidden;
+}
+
+/*  tablet-portrait */
+#iframelive.tablet-portrait iframe {
+
+    width: 785px;
+    height: 1038px !important;
+    margin: 65px 0 0 58px;
+
+}
+#iframelive.tablet-portrait #preview-wrapper {
+    background: url('pad-port-1d1d1d.jpg');
+    width: 901px;
+    height: 1213px;
+    margin: 20px auto;
+}
+
+/* iphone-landscape */
+#iframelive.iphone-landscape iframe {
+    width: 495px;
+    height: 335px !important;
+    margin: 20px 0 0 106px;
+}
+#iframelive.iphone-landscape #preview-wrapper {
+    background: url('phone-land-1d1d1d.jpg');
+    background-repeat: no-repeat;
+    width: 759px;
+    height: 395px;
+    margin: 150px auto 20px;
+}
+
+/* iphone-portrait */
+#iframelive.iphone-portrait iframe {
+    width: 337px;
+    height: 495px !important;
+    margin: 106px 0 0 20px;
+}
+#iframelive.iphone-portrait #preview-wrapper {
+    background: url('phone-port-1d1d1d.jpg');
+    background-repeat: no-repeat;
+    width: 395px;
+    height: 762px;
+    margin: 20px auto;
+}
+
+
+/*  ====================================================================================================================================== */
