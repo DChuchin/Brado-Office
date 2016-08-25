@@ -24,23 +24,28 @@
             -var items = ['prodotti', 'filiera', 'news', 'valori', 'contatti']
             each item in items
                 li.mobile-menu__item
-                    a(class='mobile-menu__link' href='#')= item=='language'? '' : item
-                    -if (item == 'prodotti')
-                        .mobile-menu__arrow
+                    .mobile-menu__link-wrap
+                        a(class='mobile-menu__link' href='#')= item=='language'? '' : item
+                        -if (item == 'prodotti')
+                            .mobile-menu__arrow
+                                    i.fa.fa-angle-down
+                        -if (item == 'valori')
+                            .mobile-menu__arrow
                                 i.fa.fa-angle-down
+                    -if (item == 'prodotti')
                         ul.mobile-menu__inner-list
                             -var arr = ['direzionali', 'attesa', 'high_line', 'operative', 'lavoro']
                             each i in arr
                                 li.mobile-menu__inner-item
-                                    a(class='mobile-menu__inner-link' href='#')= i
+                                    .mobile-menu__inner-link-wrap
+                                        a(class='mobile-menu__inner-link' href='#')= i
                     -if (item == 'valori')
-                        .mobile-menu__arrow
-                            i.fa.fa-angle-down
                         ul.mobile-menu__inner-list
                             -var arr = ['ricerca', 'collaborazione', 'accuratezza', 'ergonomia', 'flessibilita', 'organizzazione']
                             each i in arr
                                 li.mobile-menu__inner-item
-                                    a(class='mobile-menu__inner-link' href='#')= i
+                                    .mobile-menu__inner-link-wrap
+                                        a(class='mobile-menu__inner-link' href='#')= i
         ul.mobile-menu__langs
             -var langs = ['it', 'en']
             each lang in langs
@@ -55,24 +60,24 @@
     .main-menu
         .logo__wrapper
             include _components/_header-logo
-            include _components/_language
+            //- include _components/_language
         a(class='main-menu__item' href='#')
             | prodotti
         a(class='main-menu__item' href='#')
             | filiera
         a(class='main-menu__item' href='#')
             | news
-        .main-menu__video-wrapper
-            video(width="100%" height="100%" class='main-menu__video superembed-square' poster='commons/images/video-poster.jpg' preload='metadata' controls="true")
+        .main-menu__video-wrapper.video-wrapper
+            video(width="100%" height="100%" class='main-menu__video superembed-square' poster='commons/images/video-poster.jpg' preload='metadata')
                 source(src="commons/video/Brado Office Interzum 2015-SD.mp4" type="video/mp4")/
-                source(src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.webm" type="video/webm")/
-                source(src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.ogv" type="video/ogg")/
-                object(type="application/x-shockwave-flash" data="http://releases.flowplayer.org/swf/flowplayer-3.2.1.swf" width="640" height="360")
+                source(src="" type="video/webm")/
+                source(src="" type="video/ogg")/
+                object(type="application/x-shockwave-flash" data="" width="640" height="360")
                     param(name="movie" value="http://releases.flowplayer.org/swf/flowplayer-3.2.1.swf")/
                     param(name="allowFullScreen" value="true")/
                     param(name="wmode" value="transparent")/
                     param(ame="flashVars" value="config={'playlist':['http%3A%2F%2Fsandbox.thewikies.com%2Fvfe-generator%2Fimages%2Fbig-buck-bunny_poster.jpg',{'url':'http%3A%2F%2Fclips.vorwaerts-gmbh.de%2Fbig_buck_bunny.mp4','autoPlay':false}]}")/
-                    img(alt="Big Buck Bunny" src="http://sandbox.thewikies.com/vfe-generator/images/big-buck-bunny_poster.jpg" width="100%" height="100%" title="No video playback capabilities, please download the video below")/
+                    img(alt="Brado Office" src="commons/images/video-poster.jpg" width="100%" height="100%" title="No video playback capabilities, please download the video below")/
             i(class="video-btn video-btn--menu fa fa-play-circle" aria-hidden="true")
         a(href="#" class="main-menu__item main-menu__item--bg main-menu__item--ricerca")
             .main-menu__text

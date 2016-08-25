@@ -1,10 +1,14 @@
+/**********
+* Accordion
+*/
+
 var accordion = (function() {
     function init() {
         _setUpListeners();
     };
 
     function _setUpListeners() {
-        $('.mobile-menu__link').on('click', _toggleAcc);    
+        $('.mobile-menu__link-wrap').on('click', _toggleAcc);    
     };
 
     function _toggleAcc(e) {
@@ -18,9 +22,7 @@ var accordion = (function() {
             arrow = parent.find('.fa'),
             otherArrows = otherParents.find('.fa');
 
-        if (innerList.length) {
-            e.stopPropagation();
-            e.preventDefault();
+        if ((innerList.length)&&(!$(e.target).hasClass('mobile-menu__link'))) {
             innerList.stop(true, true).slideToggle(300);
             otherLists.stop(true, true).slideUp(300);
             arrow.toggleClass('fa-angle-down').toggleClass('fa-angle-up');
@@ -35,6 +37,11 @@ var accordion = (function() {
 
 })();
 
+
+/*********************
+* Search button mobile
+*/
+
 var search = (function() {
     function init() {
         _setUpListeners();
@@ -47,10 +54,10 @@ var search = (function() {
     function _toggleSearch(e) {
         var $this = $(this);
         $('.mobile-search').stop(true,true).fadeIn(300);
-        $this.fadeOut(150);
+        $this.toggleClass('hidden', true);
         $('body').on('click', function(e) {
            if (!(e.target.closest('.mobile-search')||e.target.closest('.search-btn'))) {
-                $this.fadeIn(150);
+                $this.toggleClass('hidden', false);
                 $('.mobile-search').stop(true,true).fadeOut(300);
            };
         });
@@ -61,10 +68,90 @@ var search = (function() {
     };
 })();
 
+/******
+* Popup
+*/
+
+var popup = (function() {
+    function init() {
+        _setUpListeners();
+    };
+
+    function _setUpListeners() {
+        $('.collection__link').on('click', showPopup);
+        $('.popup__btn').on('click', hidePopup);
+    };
+
+    function showPopup(e) {
+        if (!$('html').hasClass('mobile')) {
+            e.preventDefault();
+            var $this = $(this),
+                bg = $('.popup__bg'),
+                modalNum = $this.data('modal'),
+                modal = $('.popup__container').eq(modalNum);
+            if (modal.length) {
+                bg.show();
+                modal.show();
+            }
+            
+        };
+    };
+    function hidePopup(e) {
+         e.preventDefault();
+            var $this = $(this),
+                bg = $('.popup__bg'),
+                modal = $this.closest('.popup__container');
+            bg.hide();
+            modal.hide();
+    };
+
+    return  {
+        init: init
+    };
+
+})();
+
+/**************
+* Video Control
+*/
+
+var play = (function() {
+    function init() {
+        _setUpListeners();
+    };
+
+    function _setUpListeners() {
+        $('.video-btn').on('click', playVideo);
+    };
+
+    function playVideo(e) {
+        e.preventDefault();
+        var video = $(this).closest('.video-wrapper').find('video');
+        video[0].play();
+        $(this).hide();
+    };
+
+    return  {
+        init: init
+    };
+
+})();
+
+/***************
+* Initialization
+*/
+
 $(document).ready(function() {
+    var stickyHeader = $('body').not('.home-page').find('.main-header');
+    stickyHeader.sticky({
+        topSpacing:0,
+        zIndex: 100
+    });
+    isMobile();
+    play.init();
+    popup.init();
     accordion.init();
     search.init();
-    isMobile()
     slickInit();
     setUpListeners();
     $('.languages-menu').styler();
@@ -112,7 +199,10 @@ function slickInit() {
 };
 
 function setUpListeners() {
-    $(window).on('resize', isMobile);
+    $(window).on('resize', function() {
+        isMobile;
+        $('.main-header').sticky('update');    
+    });
     $('.cookie__close-btn').on('click', closeCookie);
     $('.gamburger').on('click', function() {
         if ($(this).hasClass('open')) {
@@ -151,18 +241,20 @@ function openMenu(e) {
 };
 
 function isMobile() {
-    var width = $(document).innerWidth();
-    console.log(width);
+    var width = $(document).outerWidth();
 
-    if (width < 664) {
+    if (width < 643) {
         $('html').toggleClass('mobile', true);
         $('.main-menu').stop(true,true).slideUp(300);
         $('.shadow').stop(true,true).fadeOut(300);
+        $('.compact-menu').stop(true,true).show();
+        $('.search-btn').show();
     } else {
         $('html').toggleClass('mobile', false);
         $('.mobile-menu').stop(true,true).slideUp(300);
         $('.shadow').stop(true,true).fadeOut(300);
         $('.gamburger').toggleClass('open', false);
+        $('.search-btn').hide();
     }
 };
 

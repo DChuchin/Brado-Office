@@ -35,7 +35,7 @@ var
             location    : 'src/style/**/*.css',
             compiled    : 'src/style/main.css',
             destination : 'websitestructure/commons/css/',
-            responsive  : 'src/style/_common/_responsive.css'
+            responsive  : 'src/style/_common/responsive.css'
         },
 
         img : {
@@ -214,7 +214,7 @@ gulp.task('clean', function () {
 /*----------------------- watch ---------------------------*/
 
 gulp.task('watch', function() {
-    gulp.watch(paths.css.location, ['style']);
+    gulp.watch(paths.css.location, ['style', 'responsive']);
     gulp.watch(paths.jade.location, ['jade']);
     gulp.watch(paths.js.location, ['js']);
     gulp.watch(paths.img.location, ['clean', 'img-min']);

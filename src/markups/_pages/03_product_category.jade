@@ -21,10 +21,21 @@ block content
                         | SCARICA MANAGER PDF
             ul.collection__list
                 -var items = ['Kind 202 AP', 'Kind 203 AP', 'Kind 203 APW', 'Kind 204 A', 'Kind 202 AP', 'Kind 203 AP', 'Kind 203 APW', 'Kind 204 A']
+                -var n=0
                 each item in items
                     li.collection__item
-                        a(class='collection__link' href='#')
+                        a(class='collection__link' href='#' data-modal= n++)
                             .collection__image-wrapper
                                 img(class='collection__image' src="commons/images/chair.jpg")
                             .collection__item-name= item
-                
+        .popup__bg
+            -var n=0
+            while n < 7
+                .popup__container(data-modal=n++)
+                    .popup__name
+                        | KIND
+                    .popup__image-wrapper
+                        img.popup__image(src='commons/images/popup.jpg' alt="kind")
+                    a.popup__link(href="#")
+                        | vedi i prodotti >
+                    button(type="button").popup__btn

@@ -167,23 +167,15 @@
     border-top: 4px solid var(--lime);
     z-index: 50;
     outline: none;
-    transition: .3s
+    cursor: pointer;
 }
 .slick-next {
     border-right: 4px solid var(--lime);
     transform: rotate(45deg);
     right: 2px;
-
-    &:hover {
-        transform: rotate(45deg) translate(4px,-4px);
-    }
 }
 .slick-prev {
     transform: rotate(-45deg);
     border-left: 4px solid var(--lime);
     left: 2px;
-
-    &:hover {
-        transform: rotate(-45deg) translate(-4px,-4px);
-    }
 }
